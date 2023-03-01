@@ -33,7 +33,7 @@ class ViewController: UIViewController, ledSettingDelegate {
         self.view.backgroundColor = backgroundColor
     }
     
-    //
+    
 
 }
 

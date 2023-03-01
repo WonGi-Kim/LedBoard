@@ -42,6 +42,16 @@ class SettingViewController: UIViewController {
         self.changeBackgroundColor(color: self.backgroundColor)
     }
     
+    // 키보드 다운
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textfield: UITextField) -> Bool {
+        textField.resignFirstResponder() // textField 비활성화
+        return true
+    }
+    
     //하나의 액션함수를 정의후 다른 버튼을 연결시켜주면 버튼이 호출된다 sender파라미터를 통해
     @IBAction func tapTextColorButton(_ sender: UIButton) {
         if sender == self.yellow {
